@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildklassifikation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: #e0e0e0; /* hellgrauer Hintergrund */
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #343a40; /* dunkles Grau */
+        }
+
+        .form-label {
+            color: #343a40; /* dunkles Grau */
+        }
+
+        #answerPart {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa; /* helles Grau */
+            border-radius: 10px;
+        }
+
+        #answerPart h5 {
+            color: #343a40; /* dunkles Grau */
+        }
+
+        #preview {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center">Model Deployment and Maintenance Project 2</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Bitte Bild hochladen (jpeg, png)</label>
+                        <input type="file" accept="image/png, image/jpeg" class="form-control" id="image" name="image"
+                            onchange="checkFiles(this.files);">
+                    </div>
+                </form>
+
+                <div id="answerPart" class="d-none">
+                    <h5><b>Antwort:</b></h5>
+                    <div id="answer"></div>
+
+                    <h5 class="mt-4"><b>Analysiertes Bild:</b></h5>
+                    <img id="preview" width="300" src="#" alt="preview" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
